@@ -146,7 +146,8 @@ ComponentDefinitions:
                             Variant: ManualLayout
                             Properties:
                               DropShadow: =DropShadow.None
-                              Fill: =If(ThisItem.Id=varMenuSelected,ColorValue(Mytheme.Lightcolour),RGBA(0,0,0,0))
+                              Fill: |+
+                                =If(ThisItem.Id=varMenuSelected,ColorValue(Mytheme.Lightcolour),RGBA(0,0,0,0))
                               Height: =Parent.TemplateHeight-10
                               RadiusBottomLeft: =10
                               RadiusBottomRight: =10
@@ -210,7 +211,7 @@ ComponentDefinitions:
                                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                                     DisabledColor: =RGBA(161, 159, 157, 1)
                                     DisabledFill: =Self.Fill
-                                    Fill: =RGBA(0, 120, 212, 1)
+                                    Fill: =Color.Transparent
                                     Font: =Font.'Segoe UI'
                                     Height: =Parent.Height
                                     HoverBorderColor: =RGBA(0, 0, 0, 0)
